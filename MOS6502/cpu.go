@@ -73,13 +73,6 @@ type MOS6502 struct {
 	//Opcodes Opcodes
 }
 
-type Instruction struct {
-	Name           string
-	OpcodeFunc     func()
-	OpcodeAddrMode func()
-	cycles         uint8
-}
-
 func (cpu MOS6502) Reset() {
 	cpu.Registers.Reset()
 	// cpu.Ram.Reset()
