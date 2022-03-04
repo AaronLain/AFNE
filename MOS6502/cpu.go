@@ -1,8 +1,6 @@
 package cpu
 
-import (
-	"fmt"
-)
+import "fmt"
 
 type Flag uint8
 
@@ -65,20 +63,14 @@ const (
 )
 
 type MOS6502 struct {
-	Registers Registers
-	// decimalMode bool
-	breakErr bool
-	Irq      bool
-	Nmi      bool
-	Rst      bool
+	Registers   Registers
+	decimalMode bool
+	breakErr    bool
+	Irq         bool
+	Nmi         bool
+	Rst         bool
 	//Ram 	Ram
 	//Opcodes Opcodes
-}
-
-func (cpu MOS6502) Fetch() uint8 {
-	// Needs Instruction Data
-	const fetched uint8 = 0
-	return fetched
 }
 
 func (cpu MOS6502) Reset() {
